@@ -123,6 +123,7 @@
     <Compile Include="Controllers\AccountsMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MasterController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -411,6 +412,7 @@
     <Content Include="Views\AccountsM\Login.cshtml" />
     <Content Include="Views\AccountsM\Index.cshtml" />
     <Content Include="Views\Master\Index.cshtml" />
+    <Content Include="Views\Report\Index.cshtml" />
     <Content Include="Views\AccountsM\Media.cshtml" />
   </ItemGroup>
   <ItemGroup>
