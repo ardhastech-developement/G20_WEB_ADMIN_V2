@@ -14,6 +14,11 @@ namespace G20_WEB_ADMIN.Controllers
             return View();
         }
 
+        public ActionResult Media()
+        {
+            return View();
+        }
+
         public ActionResult Login()
         {
             return View();

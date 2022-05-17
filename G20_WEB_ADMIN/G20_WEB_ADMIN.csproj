@@ -411,6 +411,7 @@
     <Content Include="Views\AccountsM\Login.cshtml" />
     <Content Include="Views\AccountsM\Index.cshtml" />
     <Content Include="Views\Master\Index.cshtml" />
+    <Content Include="Views\AccountsM\Media.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
