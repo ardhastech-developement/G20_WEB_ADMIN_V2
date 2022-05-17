@@ -1,8 +1,721 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = null;
 }
 
 
-<h1>test</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>G20 - INDIA</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/Content/register/assets/img/favicon.png" rel="icon">
+    <link href="~/Content/register/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/Content/register/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/Content/register/assets/css/style.css" rel="stylesheet">
+    <link href="~/Content/register/assets/css/Custom_style.css" rel="stylesheet">
+    <link href="~/Content/register/assets/css/media_css.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://fonts.cdnfonts.com/css/raleway-5" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+
+</head>
+
+<body>
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="contact-info d-flex align-items-center topStrip cf">
+                <ul class="leftLink">
+                    <li><a class="topSitemap" href="#">&nbsp; Sitemap</a></li>
+                    <li><a class="topSitemap" href="#">Contact</a></li>
+                    <li><a class="topFeedback" href="#">Feedback </a></li>
+                </ul>
+            </div>
+            <div class=" d-none d-md-flex align-items-center topStrip cf">
+                <ul class="rightLinks">
+                    <li><a class="skipToContent" tabindex="1" href="#contentStart">&nbsp; Skip to main content</a></li>
+                    <li><a class="screenReader" href="screen-reader-access.htm">Screen Reader Access</a></li>
+                    <li class="fontResize">
+                        <span id="ContentPlaceHolder1_ChangeSiteStyle1_lblTitle"></span>
+
+                        <div class="textResizeWrapper" id="accessControl">
+                            <div class="clearfix textResizeIn">
+                                <input type="submit"
+                                       name="ctl00$ContentPlaceHolder1$ChangeSiteStyle1$font_normal" value="A-" onclick="return validate();"
+                                       id="ContentPlaceHolder1_ChangeSiteStyle1_font_normal" title="Decrease Font Size"
+                                       class="fontScaler large">
+
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$ChangeSiteStyle1$font_large" value="A"
+                                       onclick="return validate();" id="ContentPlaceHolder1_ChangeSiteStyle1_font_large"
+                                       title="Normal Font Size" class="fontScaler normal">
+
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$ChangeSiteStyle1$font_larger" value="A+"
+                                       onclick="return validate();" id="ContentPlaceHolder1_ChangeSiteStyle1_font_larger"
+                                       title="Increase Font Size" class="fontScaler largest">
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="changeTheme">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$ColorPreference1$imgLightTheam"
+                               value="Light" id="ContentPlaceHolder1_ColorPreference1_imgLightTheam" title="Standard View"
+                               class="imgLightTheam">
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$ColorPreference1$hdnLightTheams"
+                               id="ContentPlaceHolder1_ColorPreference1_hdnLightTheams" value="5.css">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$ColorPreference1$imgDarkTheam" value="Dark"
+                               id="ContentPlaceHolder1_ColorPreference1_imgDarkTheam" title="High Contrast View" class="imgDarkTheam">
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$ColorPreference1$hdnDarkThemes"
+                               id="ContentPlaceHolder1_ColorPreference1_hdnDarkThemes" value="11.css">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="topbar1" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between topbar_head">
+            <div class="contact-info d-flex align-items-center topStrip1 cf">
+                <ul class="leftLink">
+                </ul>
+            </div>
+            <div class=" d-none d-md-flex align-items-center topStrip1 cf">
+                <ul class="rightLinks">
+                    <li class="bi bi-broadcast-pin mt-2"> <a class="skipToContent"> India</a></li>
+                    <li class="bi bi-calendar mt-2"><a class="screenReader"> @DateTime.UtcNow.Date.ToString("dd/MM/yyyy")</a></li>
+                    <li class="bi bi-clock mt-2 "> <a class="screenReader"> IST Time: @DateTime.Now.ToString("hh:mm tt")</a></li>
+                    <li>
+                        <a class="screenReader mt-2">
+                            <div id="google_translate_element" class="mt-2"></div>
+                        </a>
+                    </li>
+                    <li> <a href="@Url.Action("Login","AccountsM")" class="btn btn-outline-primary btn-sm" role="button">DASHBOARD</a> </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Header ======= -->
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class=""><a href=""><img src="~/Content/register/assets/images/logo.png" title="LOGO" alt="LOGO" class="logo_img"></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#"><span>ABOUT THE G20</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Drop Down 1</a></li>
+                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="#">Drop Down 3</a></li>
+                            <li><a href="#">Drop Down 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="#">PRESIDENCY OF INDIA</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>MEDIA</span> </a>
+                        
+                    </li>
+                    <li class="dropdown"><a class="nav-link" href="#"><span> REGISTRATION & ACCREDITATION</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">DELEGATES</a></li>
+                            <li><a href="#">MEDIA</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="nav-link" href="#">ABOUT INDIA</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section class="d-flex align-items-center" id="img-banner">
+        <div class="container">
+            <div class="main-content2">
+                <div class="owl-carousel owl-theme">
+                    <div class="d-flex item">
+                        <img src="~/Content/register/assets/images/banner.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="d-flex item">
+                        <img src="~/Content/register/assets/images/banner.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="owl-theme">
+                    <div class="owl-controls">
+                        <div class="custom-nav owl-nav"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Featured Services Section ======= -->
+        <section id="featured-services" class="featured-services">
+            <div class="container banner_block">
+                <div class="section-title">
+                    <h3>PRIORITY <span>ISSUE</span></h3>
+                </div>
+                <div class="main-content">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="~/Content/register/assets/images/silde1.png" />
+                            <span class="img-text">GLOBAL HEALTH ARCHITECTURE</span>
+                        </div>
+                        <div class="item">
+                            <img src="~/Content/register/assets/images/silde2.png" />
+                            <span class="img-text">DIGITAL TRANSFORMATION</span>
+                        </div>
+                        <div class="item">
+                            <img src="~/Content/register/assets/images/silde3.png" />
+                            <span class="img-text">SUSTAINABLE ENERGE TRANSITION</span>
+                        </div>
+                    </div>
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div class="custom-nav owl-nav"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- End Featured Services Section -->
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about section-bg pt-4 pb-4">
+            <div class="container box-shadow">
+                <div class="row">
+                    <div class="col-lg-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
+                        <div class="section-title">
+                            <h3>Message from Prime Minister <span>Narendra Modi</span></h3>
+                        </div>
+                        <div class="content-block">
+                            <p class="content-1">
+                                In a world that is full of fault lines and rifts, we need to build a shared future.
+                            </p>
+                            <p class="content-2">
+                                - Hon'ble Prime Ministerof india, Narendra Modi
+                            </p> <br />
+                            <p class="content-3">
+                                Vivamus at justo et erat scelerisque scelerisque. Sed at placerat ex,nec elementum risus.
+                                Aliquam erat volutpat.
+                            <p>&nbsp;</p>
+                            </p>
+                        </div>
+                        <div class="flag-center">
+                            <img src="~/Content/register/assets/images/flag.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column justify-content-center">
+                        <img src="~/Content/register/assets/images/seaction1.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End About Section -->
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="about" class="about section-bg1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 pt-4 pt-lg-0 content d-flex flex-column justify-content-center">
+                        <div class="section-title">
+                            <h3 class="seac1">MINISTERIAL MEETINGS SCHEDULE</h3>
+                        </div>
+                        <div class="">
+                            <div class="row border-bottom padbtm">
+                                <div class="col-sm-3">
+                                    <p class="clr-blue">Jun 19 to 20,2023</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="clr-blue">"Overview" Page has been published</p>
+                                    <p class="clr-light-blue"><a href="#"> Health Minister's Meeting</a></p>
+                                </div>
+                            </div>
+                            <div class="row border-bottom padtb">
+                                <div class="col-sm-3">
+                                    <p class="clr-blue">Jun 6 to 11,2023</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="clr-blue">Tourism Minister's Meeting</p>
+                                    <p class="clr-light-blue"><a href="#">Proin convallis ultricies metus, sit amet commodo ipsum. </a></p>
+                                </div>
+                            </div>
+                            <div class="row border-bottom padtb">
+                                <div class="col-sm-3">
+                                    <p class="clr-blue">Aug 12 to 15,2023</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="clr-blue">G20 Summit Meeting</p>
+                                    <p class="clr-light-blue"><a href="#"> Proin convallis ultricies metus, sit amet commodo ipsum. </a></p>
+                                </div>
+                            </div>
+                            <div class="row border-bottom padtb">
+                                <div class="col-sm-3">
+                                    <p class="clr-blue">Sep 22 to 24,2023</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="clr-blue">Agriculture Minister's Meeting</p>
+                                    <p class="clr-light-blue"><a href="#"> Proin convallis ultricies metus, sit amet commodo ipsum. </a></p>
+                                </div>
+                            </div>
+                            <div class="row padtb">
+                                <div class="col-sm-3">
+                                    <p class="clr-blue"></p>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="clr-blue text-end">  <a href="#" class="btn btn-outline-primary btn-sm" role="button">VIEW ALL</a> </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-flex flex-column justify-content-center">
+                        <img src="~/Content/register/assets/images/logo1.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Frequently Asked Questions Section -->
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team section-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h3 class="seac2">NEWS AND EVENTS</h3>
+                    </div>
+                </div>
+                <div class="main-content1">
+                    <div class="owl-carousel owl-theme">
+                        <!-- <div class="row"> -->
+                        <div class="align-items-stretch item1">
+                            <div class="member">
+                                <div class="member-img">
+                                    <img src="~/Content/register/assets/images/event1.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="member-info">
+                                    <p class="clr-blue-date"><i class="bi bi-calendar" aria-hidden="true"></i> <a href="#"> Oct 19 to 20,2023</a></p>
+                                    <h4>DELHI</h4>
+                                    <a href="#">Health Minister's Meeting </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="align-items-stretch item1">
+                            <div class="member">
+                                <div class="member-img">
+                                    <img src="~/Content/register/assets/images/event2.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="member-info">
+                                    <p class="clr-blue-date"><i class="bi bi-calendar" aria-hidden="true"></i> <a href="#"> Oct 19 to 20,2023</a></p>
+                                    <h4>LUCKNOW</h4>
+                                    <a href="#">Tourism Minister's Meeting</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="align-items-stretch item1">
+                            <div class="member">
+                                <div class="member-img">
+                                    <img src="~/Content/register/assets/images/event3.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="member-info">
+                                    <p class="clr-blue-date"><i class="bi bi-calendar" aria-hidden="true"></i> <a href="#"> Oct 19 to 20,2023</a></p>
+                                    <h4>KOLKATA</h4>
+                                    <a href="#">G20 Summit Meeting</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="align-items-stretch item1">
+                            <div class="member">
+                                <div class="member-img">
+                                    <img src="~/Content/register/assets/images/event4.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="member-info">
+                                    <p class="clr-blue-date"><i class="bi bi-calendar" aria-hidden="true"></i> <a href="#"> Oct 19 to 20,2023</a></p>
+                                    <h4>CHENNAI</h4>
+                                    <a href="#">Agriculture Minister's Meeting</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div>
+                                <div class="custom-nav owl-nav"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="row padtb">
+                    <div class="col-sm-3">
+                        <p class="clr-blue"></p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="clr-blue text-end">  <a href="#" class="btn btn-outline-primary btn-sm" role="button">VIEW ALL</a> </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Team Section -->
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="section-title">
+                    <h3>VIDEO <span>GALLERY</span></h3>
+                </div>
+
+
+                <div id="lightgallery" class="row portfolio-container  lightGallery">
+
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-app padlr">
+                        <iframe width="325" height="212" src="https://www.youtube.com/embed/wSuXis9ynmM"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+
+
+
+                        <div class="portfolio-info">
+                            <h4>ETIAM FRINGILLA</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed a fringilla urna. Nulla vel tortor
+                                fribus,
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-6 portfolio-item filter-app  padlr">
+                        <a class="image-popup-vertical-fit" href="~/Content/register/assets/images/video3.png" title="ETIAM FRINGILLA">
+                            <img src="~/Content/register/assets/images/video3.png" class="img-fluid" alt="">
+                            <i class="fa fa-search-plus" aria-hidden="true"></i>
+                            <div class="demo-gallery-poster">
+                                <img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image">
+                            </div>
+                        </a>
+
+                        <div class="portfolio-info">
+                            <h4>ETIAM FRINGILLA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestiae possimus debitis est suscipit,
+                                labore nulla quod et repellat? Sint ratione eaque fugiat provident tenetur reiciendis earum quos cumque
+                                excepturi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-card  padlr">
+                        <a class="image-popup-vertical-fit" href="~/Content/register/assets/images/video4.png" title="ETIAM FRINGILLA">
+                            <img src="~/Content/register/assets/images/video4.png" class="img-fluid" alt="">
+                            <i class="fa fa-search-plus" aria-hidden="true"></i>
+                            <div class="demo-gallery-poster">
+                                <img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image">
+                            </div>
+                        </a>
+
+                        <div class="portfolio-info">
+                            <h4>ETIAM FRINGILLA</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed a fringilla urna. Nulla vel tortor
+                                fribus,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-app  padlr">
+                        <a class="image-popup-vertical-fit" href="~/Content/register/assets/images/video2.png" title="ETIAM FRINGILLA">
+                            <img src="~/Content/register/assets/images/video2.png" class="img-fluid" alt="">
+                            <i class="fa fa-search-plus" aria-hidden="true"></i>
+                            <div class="demo-gallery-poster">
+                                <img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image">
+                            </div>
+                        </a>
+
+                        <div class="portfolio-info">
+                            <h4>ETIAM FRINGILLA</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed a fringilla urna. Nulla vel tortor
+                                fribus,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-card padlr">
+                        <a class="image-popup-vertical-fit" href="~/Content/register/assets/images/video1.png" title="ETIAM FRINGILLA">
+                            <img src="~/Content/register/assets/images/video1.png" class="img-fluid" alt="">
+                            <i class="fa fa-search-plus" aria-hidden="true"></i>
+                            <div class="demo-gallery-poster">
+                                <img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image">
+                            </div>
+                        </a>
+
+                        <div class="portfolio-info">
+                            <h4>ETIAM FRINGILLA</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed a fringilla urna. Nulla vel tortor
+                                fribus,
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Section -->
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team section-bg">
+            <div class="container">
+
+                <div class="section-title pt-2">
+                    <h3>PHOTO <span>GALLERY</span></h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 padlr">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="~/Content/register/assets/images/image1.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 padlr">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="~/Content/register/assets/images/image2.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 padlr">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="~/Content/register/assets/images/image3.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 padlr">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="~/Content/register/assets/images/image4.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
+
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact footer-row">
+                        <img src="~/Content/register/assets/images/logo.png" title="LOGO" alt="LOGO">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>QUICK LINKS</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Home</a></li>
+                            <li><i class="bx"></i> <a href="#">About The G20</a></li>
+                            <li><i class="bx"></i> <a href="#">G20 Presidency Of India</a></li>
+                            <li><i class="bx"></i> <a href="#">Workstreams</a></li>
+                            <li><i class="bx"></i> <a href="#">Media</a></li>
+                            <li><i class="bx"></i> <a href="#">Explore india</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>DIRECTORY</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Abenomics</a></li>
+                            <li><i class="bx"></i> <a href="#">G20 INDIA 2023</a></li>
+                            <li><i class="bx"></i> <a href="#">Innovation india</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>MENU</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Cabinet</a></li>
+                            <li><i class="bx"></i> <a href="#">Ministries and Agencies</a></li>
+                            <li><i class="bx"></i> <a href="#">The Diet</a></li>
+                            <li><i class="bx"></i> <a href="#">The Supreme Count</a></li>
+                            <li><i class="bx"></i> <a href="#">Other Governmental Agencies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>CONTACT</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Address line 1</a></li>
+                            <li><i class="bx"></i> <a href="#">Address line 2,</a></li>
+                            <li><i class="bx"></i> <a href="#">Email: info@g20india.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="copyright topStrip cf">
+                <ul class="leftLink">
+                    <li> <a class="topSitemap" href="#">&nbsp; Trems and Conditions</a></li>
+                    <li><a class="topSitemap" href="#">Privacy Policy</a></li>
+                    <li><a class="topFeedback" href="#">Copyright Policy </a></li>
+                    <li><a class="topSitemap" href="#">Hyperlinking Policy</a></li>
+                    <li><a class="topSitemap" href="#">Accessibility Statement</a></li>
+                    <li><a class="topFeedback" href="#">Help </a></li>
+                </ul>
+            </div>
+            <div class="credits">
+                © Government of india 2023
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/Content/register/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="~/Content/register/assets/vendor/aos/aos.js"></script>
+    <script src="~/Content/register/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/register/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/Content/register/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/Content/register/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/Content/register/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/Content/register/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/Content/register/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css" rel="stylesheet">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <script>
+    $(document).ready(function () {
+      $('#lightgallery').lightGallery();
+    });
+    </script>
+    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1556817331/lightgallery-all.min.js"></script>
+    <script>
+
+
+    $('.main-content .owl-carousel').owlCarousel({
+      stagePadding: 5,
+      loop: true,
+      margin: 1,
+      nav: true,
+      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+      navContainer: '.main-content .custom-nav',
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 3,
+        }
+      }
+    });
+
+    $('.main-content1 .owl-carousel').owlCarousel({
+      stagePadding: 5,
+      loop: true,
+      margin: 1,
+      nav: true,
+      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+      navContainer: '.main-content1 .custom-nav',
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4,
+        }
+      }
+    });
+    $('.main-content2 .owl-carousel').owlCarousel({
+      stagePadding: 5,
+      loop: true,
+      margin: 1,
+      nav: true,
+      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+      navContainer: '.main-content2 .custom-nav',
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1,
+        }
+      }
+    });
+    </script>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en' },
+        'google_translate_element'
+      );
+    }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
+		cb=googleTranslateElementInit">
+    </script>
+</body>
+
+</html>
 

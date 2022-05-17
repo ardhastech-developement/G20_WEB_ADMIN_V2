@@ -16,7 +16,7 @@ namespace G20_WEB_ADMIN
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "AccountsM", action = "Login", id = UrlParameter.Optional }
+                defaults: new { controller = "AccountsM", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
