@@ -138,6 +138,8 @@
     <Content Include="Content\assets\css\nucleo-svg.css" />
     <Content Include="Content\assets\css\soft-ui-dashboard.css" />
     <Content Include="Content\assets\css\soft-ui-dashboard.min.css" />
+    <Content Include="Content\assets\css\toastr.css" />
+    <Content Include="Content\assets\css\toastr.min.js" />
     <Content Include="Content\assets\fonts\nucleo-icons.svg" />
     <Content Include="Content\assets\img\apple-icon.png" />
     <Content Include="Content\assets\img\curved-images\curved-10.jpg" />
