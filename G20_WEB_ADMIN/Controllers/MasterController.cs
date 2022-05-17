@@ -11,6 +11,7 @@ namespace G20_WEB_ADMIN.Controllers
         // GET: Master
         public ActionResult Index()
         {
+            int i = 0;
             return View();
         }
     }
