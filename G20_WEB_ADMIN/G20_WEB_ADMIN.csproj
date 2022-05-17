@@ -301,6 +301,8 @@
     <Content Include="Content\register\assets\vendor\glightbox\js\glightbox.min.js" />
     <Content Include="Content\register\assets\vendor\isotope-layout\isotope.pkgd.js" />
     <Content Include="Content\register\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Content\register\assets\vendor\OwlCarousel\owl.carousel.min.css" />
+    <Content Include="Content\register\assets\vendor\OwlCarousel\owl.carousel.min.js" />
     <Content Include="Content\register\assets\vendor\php-email-form\validate.js" />
     <Content Include="Content\register\assets\vendor\purecounter\purecounter.js" />
     <Content Include="Content\register\assets\vendor\swiper\swiper-bundle.min.css" />

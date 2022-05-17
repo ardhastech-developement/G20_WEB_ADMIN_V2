@@ -36,7 +36,7 @@
     <link href="~/Content/register/assets/css/style.css" rel="stylesheet">
     <link href="~/Content/register/assets/css/Custom_style.css" rel="stylesheet">
     <link href="~/Content/register/assets/css/media_css.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/register/assets/vendor/OwlCarousel/owl.carousel.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="http://fonts.cdnfonts.com/css/raleway-5" rel="stylesheet">
@@ -138,9 +138,10 @@
                     <li><a class="nav-link" href="#">PRESIDENCY OF INDIA</a></li>
                     <li class="dropdown">
                         <a href="#"><span>MEDIA</span> </a>
-                        
+
                     </li>
-                    <li class="dropdown"><a class="nav-link" href="#"><span> REGISTRATION & ACCREDITATION</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown">
+                        <a class="nav-link" href="#"><span> REGISTRATION & ACCREDITATION</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="@Url.Action("Delgates","AccountsM")">DELEGATES</a></li>
                             <li><a href="@Url.Action("Media","AccountsM")">MEDIA</a></li>
@@ -631,85 +632,96 @@
     <!-- Template Main JS File -->
     <script src="~/Content/register/assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   
+    <script src="~/Content/register/assets/vendor/OwlCarousel/owl.carousel.min.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css" rel="stylesheet">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
     <script>
-    $(document).ready(function () {
-      $('#lightgallery').lightGallery();
-    });
+        $(document).ready(function () {
+            $('#lightgallery').lightGallery();
+        });
     </script>
     <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1556817331/lightgallery-all.min.js"></script>
     <script>
 
 
-    $('.main-content .owl-carousel').owlCarousel({
-      stagePadding: 5,
-      loop: true,
-      margin: 1,
-      nav: true,
-      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-      navContainer: '.main-content .custom-nav',
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 3
-        },
-        1000: {
-          items: 3,
-        }
-      }
-    });
+        $('.main-content .owl-carousel').owlCarousel({
+            stagePadding: 5,
+            loop: true,
+            margin: 1,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+            navContainer: '.main-content .custom-nav',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3,
+                }
+            }
+        });
 
-    $('.main-content1 .owl-carousel').owlCarousel({
-      stagePadding: 5,
-      loop: true,
-      margin: 1,
-      nav: true,
-      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-      navContainer: '.main-content1 .custom-nav',
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 3
-        },
-        1000: {
-          items: 4,
-        }
-      }
-    });
-    $('.main-content2 .owl-carousel').owlCarousel({
-      stagePadding: 5,
-      loop: true,
-      margin: 1,
-      nav: true,
-      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-      navContainer: '.main-content2 .custom-nav',
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 1,
-        }
-      }
-    });
+        $('.main-content1 .owl-carousel').owlCarousel({
+            stagePadding: 5,
+            loop: true,
+            margin: 1,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+            navContainer: '.main-content1 .custom-nav',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4,
+                }
+            }
+        });
+        $('.main-content2 .owl-carousel').owlCarousel({
+            stagePadding: 5,
+            loop: true,
+            margin: 1,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: true,
+            navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+            navContainer: '.main-content2 .custom-nav',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1,
+                }
+            }
+        });
     </script>
     <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        { pageLanguage: 'en' },
-        'google_translate_element'
-      );
-    }
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        }
     </script>
 
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
