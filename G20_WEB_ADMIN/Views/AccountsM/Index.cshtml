@@ -21,8 +21,14 @@
     <link href="~/Content/register/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Sen:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Sen:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="~/Content/register/assets/vendor/aos/aos.css" rel="stylesheet">
@@ -108,10 +114,10 @@
                     <li class="bi bi-clock mt-2 "> <a class="screenReader"> IST Time: @DateTime.Now.ToString("hh:mm tt")</a></li>
                     <li>
                         <a class="screenReader mt-2">
-                            <div id="google_translate_element" class="mt-2" style="font-family: 'Poppins', sans-serif;"></div>
+                            <div id="google_translate_element" class="mt-2" style="font-family: 'Sen', sans-serif;"></div>
                         </a>
                     </li>
-                    <li> <a href="@Url.Action("Login","AccountsM")" class="btn btn-outline-primary btn-sm" role="button">DASHBOARD</a> </li>
+                    <li> <a href="@Url.Action("Login","AccountsM")" class="btn btn-outline-primary btn-sm" role="button" style="background: #0d6efd !important;">DASHBOARD</a> </li>
                 </ul>
             </div>
         </div>
@@ -127,28 +133,28 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li class="dropdown">
-                        <a href="#"><span style="font-family: 'Poppins', sans-serif;">ABOUT THE G20</span> <i class="bi bi-chevron-down"></i></a>
+                        <a href="#"><span style="font-family: 'Sen', sans-serif;">ABOUT THE G20</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#"style="font-family: 'Poppins', sans-serif;">Drop Down 1</a></li>
-                            <li><a href="#"style="font-family: 'Poppins', sans-serif;">Drop Down 2</a></li>
-                            <li><a href="#"style="font-family: 'Poppins', sans-serif;">Drop Down 3</a></li>
-                            <li><a href="#"style="font-family: 'Poppins', sans-serif;">Drop Down 4</a></li>
+                            <li><a href="#" style="font-family: 'Sen', sans-serif;">Drop Down 1</a></li>
+                            <li><a href="#" style="font-family: 'Sen', sans-serif;">Drop Down 2</a></li>
+                            <li><a href="#" style="font-family: 'Sen', sans-serif;">Drop Down 3</a></li>
+                            <li><a href="#" style="font-family: 'Sen', sans-serif;">Drop Down 4</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link" href="#"style="font-family: 'Poppins', sans-serif;">PRESIDENCY OF INDIA</a></li>
+                    <li><a class="nav-link" href="#"style="font-family: 'Sen', sans-serif;">PRESIDENCY OF INDIA</a></li>
                     <li class="dropdown">
-                        <a href="#"><span style="font-family: 'Poppins', sans-serif;">MEDIA</span> </a>
+                        <a href="#"><span style="font-family: 'Sen', sans-serif;">MEDIA</span> </a>
 
                     </li>
                     <li class="dropdown">
-                        <a class="nav-link" href="#"><span style="font-family: 'Poppins', sans-serif;"> REGISTRATION & ACCREDITATION</span> <i class="bi bi-chevron-down"></i></a>
+                        <a class="nav-link" href="#"><span style="font-family: 'Sen', sans-serif;"> REGISTRATION & ACCREDITATION</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a style="font-family: 'Poppins', sans-serif;" href="@Url.Action("Delgates","AccountsM")">DELEGATES</a></li>
-                            <li><a style="font-family: 'Poppins', sans-serif;" href="@Url.Action("Media","AccountsM")">MEDIA</a></li>
+                            <li><a style="font-family: 'Sen', sans-serif;" href="@Url.Action("Delgates","AccountsM")">DELEGATES</a></li>
+                            <li><a style="font-family: 'Sen', sans-serif;" href="@Url.Action("Media","AccountsM")">MEDIA</a></li>
                         </ul>
                     </li>
 
-                    <li><a class="nav-link" href="#" style="font-family: 'Poppins', sans-serif;">ABOUT INDIA</a></li>
+                    <li><a class="nav-link" href="#" style="font-family: 'Sen', sans-serif;">ABOUT INDIA</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>

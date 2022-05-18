@@ -800,47 +800,19 @@ a {
 
 
 .back-to-top {
-
-
 	display: none;
-
-
 	width: 40px;
-
-
 	height: 40px;
-
-
 	line-height: 40px;
-
-
 	text-align: center;
-
-
 	font-size: 26px;
-
-
 	color: white;
-
-
 	position: fixed;
-
-
 	border-radius: 10px;
-
-
 	bottom: 20px;
-
-
 	right: 12px;
-
-
-	background-color: #8833ff;
-
-
+	background-color: #02209e;
 	z-index: 5;
-
-
 }
 
 
@@ -5056,50 +5028,20 @@ input::placeholder {
 
 
 .switcher-btn {
-
-
 	width: 40px;
-
-
 	height: 40px;
-
-
 	line-height: 40px;
-
-
 	font-size: 24px;
-
-
-	background: #8833ff;
-
-
+	background: #02209e;
 	box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, .13);
-
-
 	color: #fff;
-
-
 	text-align: center;
-
-
 	border-top-left-radius: 10px;
-
-
 	border-bottom-left-radius: 10px;
-
-
 	position: absolute;
-
-
 	top: 40%;
-
-
 	right: 100%;
-
-
 	cursor: pointer;
-
-
 }
 
 

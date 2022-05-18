@@ -18,7 +18,110 @@
 <div class="page-content">
 
     <div class="dash-wrapper bg-dark">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 row-cols-xxl-5">
+        <br />
+        <div class="row">
+            <div class="col-12 col-lg-8 d-flex">
+                <div class="card radius-10 w-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="mb-0">Geographic</h6>
+                            </div>
+                            <div class="font-22 ms-auto">
+                                <i class="bx bx-dots-horizontal-rounded"></i>
+                            </div>
+                        </div>
+                        <div class="" id="geographic-map"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+                <div class="card radius-10 w-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="mb-0">Impressions By Country</h6>
+                            </div>
+                            <div class="font-22 ms-auto">
+                                <i class="bx bx-dots-horizontal-rounded"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-top-countries mb-3 p-3">
+
+                        <div class="row mb-4">
+                            <div class="col-2">
+                                <img src="~/Content/layout1/assets/images/icons/united-states.png" width="42" alt="">
+                            </div>
+                            <div class="col">
+                                <p class="mb-2">United States <strong class="float-end">445,85</strong></p>
+                                <div class="progress radius-10" style="height:6px;">
+                                    <div class="progress-bar bg-gradient-blues" role="progressbar" style="width: 86%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-2">
+                                <img src="~/Content/layout1/assets/images/icons/germany.png" width="42" alt="">
+                            </div>
+                            <div class="col">
+                                <p class="mb-2">Germany <strong class="float-end">683,46</strong></p>
+                                <div class="progress radius-10" style="height:6px;">
+                                    <div class="progress-bar bg-gradient-cosmic" role="progressbar" style="width: 66%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-2">
+                                <img src="~/Content/layout1/assets/images/icons/canada.png" width="42" alt="">
+                            </div>
+                            <div class="col">
+                                <p class="mb-2">Canada <strong class="float-end">982,43</strong></p>
+                                <div class="progress radius-10" style="height:6px;">
+                                    <div class="progress-bar bg-gradient-burning" role="progressbar" style="width: 56%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-2">
+                                <img src="~/Content/layout1/assets/images/icons/india.png" width="42" alt="">
+                            </div>
+                            <div class="col">
+                                <p class="mb-2">India <strong class="float-end">852,35</strong></p>
+                                <div class="progress radius-10" style="height:6px;">
+                                    <div class="progress-bar bg-gradient-lush" role="progressbar" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-2">
+                                <img src="~/Content/layout1/assets/images/icons/netherlands.png" width="42" alt="">
+                            </div>
+                            <div class="col">
+                                <p class="mb-2">Netherlands <strong class="float-end">785,24</strong></p>
+                                <div class="progress radius-10" style="height:6px;">
+                                    <div class="progress-bar bg-gradient-kyoto" role="progressbar" style="width: 38%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-2">
+                                <img src="~/Content/layout1/assets/images/icons/malaysia.png" width="42" alt="">
+                            </div>
+                            <div class="col">
+                                <p class="mb-2">Malaysia <strong class="float-end">387,56</strong></p>
+                                <div class="progress radius-10" style="height:6px;">
+                                    <div class="progress-bar bg-gradient-moonlit" role="progressbar" style="width: 28%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
             <div class="col border-end border-light-2">
                 <div class="card bg-transparent shadow-none mb-0">
                     <div class="card-body text-center">
@@ -49,16 +152,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col border-end border-light-2">
-                <div class="card bg-transparent shadow-none mb-0">
-                    <div class="card-body text-center">
-                        <p class="mb-1 text-white">Bounce Rate</p>
-                        <h3 class="mb-3 text-white">42.68%</h3>
-                        <p class="font-13 text-white"><span class="text-success"><i class="lni lni-arrow-up"></i> 2.5%</span> vs last 7 days</p>
-                        <div id="chart4"></div>
-                    </div>
-                </div>
-            </div>
             <div class="col">
                 <div class="card bg-transparent shadow-none mb-0">
                     <div class="card-body text-center">
@@ -74,107 +167,7 @@
 
     <!--end row-->
 
-    <div class="row">
-        <div class="col-12 col-lg-8 d-flex">
-            <div class="card radius-10 w-100">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <h6 class="mb-0">Geographic</h6>
-                        </div>
-                        <div class="font-22 ms-auto">
-                            <i class="bx bx-dots-horizontal-rounded"></i>
-                        </div>
-                    </div>
-                    <div class="" id="geographic-map"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 d-flex">
-            <div class="card radius-10 w-100">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <h6 class="mb-0">Impressions By Country</h6>
-                        </div>
-                        <div class="font-22 ms-auto">
-                            <i class="bx bx-dots-horizontal-rounded"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="dashboard-top-countries mb-3 p-3">
-
-                    <div class="row mb-4">
-                        <div class="col-2">
-                            <img src="~/Content/layout1/assets/images/icons/united-states.png" width="42" alt="">
-                        </div>
-                        <div class="col">
-                            <p class="mb-2">United States <strong class="float-end">445,85</strong></p>
-                            <div class="progress radius-10" style="height:6px;">
-                                <div class="progress-bar bg-gradient-blues" role="progressbar" style="width: 86%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-2">
-                            <img src="~/Content/layout1/assets/images/icons/germany.png" width="42" alt="">
-                        </div>
-                        <div class="col">
-                            <p class="mb-2">Germany <strong class="float-end">683,46</strong></p>
-                            <div class="progress radius-10" style="height:6px;">
-                                <div class="progress-bar bg-gradient-cosmic" role="progressbar" style="width: 66%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-2">
-                            <img src="~/Content/layout1/assets/images/icons/canada.png" width="42" alt="">
-                        </div>
-                        <div class="col">
-                            <p class="mb-2">Canada <strong class="float-end">982,43</strong></p>
-                            <div class="progress radius-10" style="height:6px;">
-                                <div class="progress-bar bg-gradient-burning" role="progressbar" style="width: 56%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-2">
-                            <img src="~/Content/layout1/assets/images/icons/india.png" width="42" alt="">
-                        </div>
-                        <div class="col">
-                            <p class="mb-2">India <strong class="float-end">852,35</strong></p>
-                            <div class="progress radius-10" style="height:6px;">
-                                <div class="progress-bar bg-gradient-lush" role="progressbar" style="width: 45%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-2">
-                            <img src="~/Content/layout1/assets/images/icons/netherlands.png" width="42" alt="">
-                        </div>
-                        <div class="col">
-                            <p class="mb-2">Netherlands <strong class="float-end">785,24</strong></p>
-                            <div class="progress radius-10" style="height:6px;">
-                                <div class="progress-bar bg-gradient-kyoto" role="progressbar" style="width: 38%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-0">
-                        <div class="col-2">
-                            <img src="~/Content/layout1/assets/images/icons/malaysia.png" width="42" alt="">
-                        </div>
-                        <div class="col">
-                            <p class="mb-2">Malaysia <strong class="float-end">387,56</strong></p>
-                            <div class="progress radius-10" style="height:6px;">
-                                <div class="progress-bar bg-gradient-moonlit" role="progressbar" style="width: 28%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div><!--end row-->
+    <!--end row-->
 
     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
         <div class="col d-flex">
