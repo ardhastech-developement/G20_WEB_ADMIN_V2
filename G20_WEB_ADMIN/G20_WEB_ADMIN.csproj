@@ -912,6 +912,7 @@
     <Content Include="Content\register\assets\css\media_css.css" />
     <Content Include="Content\register\assets\css\style.css" />
     <Content Include="Content\register\assets\images\banner.png" />
+    <Content Include="Content\register\assets\images\banner2.png" />
     <Content Include="Content\register\assets\images\event1.png" />
     <Content Include="Content\register\assets\images\event2.png" />
     <Content Include="Content\register\assets\images\event3.png" />

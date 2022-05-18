@@ -3941,32 +3941,15 @@ a {
 
 
 .login-separater span {
-
-
 	position: relative;
-
-
 	top: 26px;
-
-
 	margin-top: -10px;
-
-
 	background: #ffffff;
-
-
 	padding: 5px;
-
-
 	font-size: 12px;
-
-
-	color: #cbcbcb;
-
-
+	color: #000000;
 	z-index: 1;
-
-
+	font-weight:bold;
 }
 
 
