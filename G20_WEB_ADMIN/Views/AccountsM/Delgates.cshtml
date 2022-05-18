@@ -11,871 +11,250 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
+
+    <link href="~/Content/register/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/Content/register/assets/css/style.css" rel="stylesheet">
+    <link href="~/Content/register/assets/css/Custom_style.css" rel="stylesheet">
+    <link href="~/Content/register/assets/css/media_css.css" rel="stylesheet">
+    <link href="~/Content/register/assets/vendor/OwlCarousel/owl.carousel.min.css" rel="stylesheet" />
+
     <link href="~/Content/assets/css/toastr.css" rel="stylesheet" />
 
     <script src="~/Scripts/jquery-3.4.1.js"></script>
     <script src="~/Content/assets/css/toastr.min.js"></script>
 
-</head>
+    <style>
+        .form-1-box {
+            padding-top: 30px;
+            text-align: left;
+        }
 
-<body style="font-family: 'Poppins', sans-serif;">
+            .form-1-box legend {
+                font-size: inherit;
+                line-height: 30px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #555;
+            }
+
+            .form-1-box .form-check-label {
+                line-height: 1.5;
+                vertical-align: top;
+            }
+
+            .form-1-box input[type="text"],
+            .form-1-box input[type="email"],
+            .form-1-box input[type="password"] {
+                background: none;
+                border: 1px solid #ddd;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                color: #888;
+                box-shadow: none;
+            }
+
+                .form-1-box input[type="text"]:focus,
+                .form-1-box input[type="email"]:focus,
+                .form-1-box input[type="password"]:focus {
+                    outline: 0;
+                    background: none;
+                    border: 1px solid #db5d50;
+                    box-shadow: none;
+                }
+
+                .form-1-box input[type="text"]::-moz-placeholder,
+                .form-1-box input[type="email"]::-moz-placeholder,
+                .form-1-box input[type="password"]::-moz-placeholder {
+                    color: #bbb;
+                    font-style: italic;
+                }
+
+                .form-1-box input[type="text"]:-ms-input-placeholder,
+                .form-1-box input[type="email"]:-ms-input-placeholder,
+                .form-1-box input[type="password"]:-ms-input-placeholder {
+                    color: #bbb;
+                    font-style: italic;
+                }
+
+                .form-1-box input[type="text"]::-webkit-input-placeholder,
+                .form-1-box input[type="email"]::-webkit-input-placeholder,
+                .form-1-box input[type="password"]::-webkit-input-placeholder {
+                    color: #bbb;
+                    font-style: italic;
+                }
+
+            .form-1-box button.btn-customized {
+                margin-top: 1rem;
+                padding: .75rem 1.5rem;
+                background: #db5d50;
+                border: 0;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                color: #fff;
+                box-shadow: none;
+            }
+
+                .form-1-box button.btn-customized:hover,
+                .form-1-box button.btn-customized:active,
+                .form-1-box button.btn-customized:focus,
+                .form-1-box button.btn-customized:active:focus,
+                .form-1-box button.btn-customized.active:focus,
+                .form-1-box button.btn.btn-primary:not(:disabled):not(.disabled):active,
+                .form-1-box button.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+                    outline: 0;
+                    background: #ca594d;
+                    border: 0;
+                    color: #fff;
+                    box-shadow: none;
+                }
+    </style>
+</head>
+@*<img src="~/Content/assets/img/patten_3.png" />*@
+<body style="font-family: 'Poppins', sans-serif;  background-image: url(../../Content/assets/img/patten_3.png)">
     <form name="application_form" action="send_mail.php" method="post" onsubmit="return registration();">
         <div align="center">
-            <table width="928" border="0" cellpadding="0" cellspacing="0" style="border: 2px solid; border-color: burlywood; padding: 10px; ">
-                <tr>
-                    <td rowspan="4" valign="top">
-                        <table width="102%" bordr="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td width="675" height="382" valign="top">
+            <div class="row">
 
-                                    <fieldset>
-                                        <legend><span class="subHead"> Delegate Information</span></legend>
-                                        <table style="width: 100%; font-family: 'Poppins', sans-serif; font-size: 13px" cellpadding="2">
-                                            <tr>
-                                                <td style="width: 25%;" valign="top"> Salutation*</td>
-                                                <td colspan="2" style="width: 50%; padding-top: 7px;" valign="top">
-                                                    <select name="salutation" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="-">Select</option>
-                                                        <option value="Dr">Dr</option>
-                                                        <option value="Prof">Prof</option>
-                                                        <option value="Mr">Mr</option>
-                                                        <option value="Mdm">Mdm</option>
-                                                        <option value="Ms">Ms</option>
-                                                    </select>
-                                                </td>
-                                                <td style="width: 22%;" valign="top"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 25%;" valign="top"> Last Name*</td>
-                                                <td style=" width: 22%;" valign="top"><input type="text" name="lastname" id="lastname" /></td>
-                                                <td style=" width: 25%;" valign="top"> First Name*</td>
-                                                <td style=" width: 22%;" valign="top"><input type="text" name="firstname" id="firstname" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 25%;" valign="top"></td>
-                                                <td style=" width: 22%;" valign="top"> * As in NRIC/Passport</td>
-                                                <td style="width: 25%;" valign="top"></td>
-                                                <td style="width: 22%;" valign="top"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="width: 25%;" valign="top"> Name to appear on Badge*</td>
-                                                <td style="width: 22%;" valign="top">
-                                                    <span style=" width: 22%;">
-                                                        <input type="text" name="badge_name" id="badge_name" />
-                                                    </span>
-                                                </td>
-                                                <td colspan="2" valign="top">(Max of 20 characters)</td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 25%;" valign="top">Job Designation*</td>
-                                                <td style=" width: 22%;" valign="top"><input type="text" name="job_designation" id="job_designation" /></td>
-                                                <td style=" width: 25%;" valign="top"> Company*</td>
-                                                <td style=" width: 22%;" valign="top"><input type="text" name="company_name" id="company_name" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 25%;" valign="top">&nbsp;</td>
-                                                <td style=" width: 22%;" valign="top">&nbsp;</td>
-                                                <td style=" width: 25%;" valign="top">&nbsp;</td>
-                                                <td style=" width: 22%;" valign="top">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" style="WIDTH: 47%" valign="top"><strong>Industry/Nature of Business</strong>*</td>
-                                                <td style=" width: 25%;" valign="top"></td>
-                                                <td style=" width: 22%;" valign="top"></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="4" style="WIDTH: 97%" valign="top"> (Indicate the section(s) of your busines interest for networking purposes. Please select not more than 3 sectors)</td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 25%;" valign="top"></td>
-                                                <td style=" width: 22%;" valign="top"></td>
-                                                <td style=" width: 25%;" valign="top"></td>
-                                                <td style=" width: 22%;" valign="top"></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="4" style="PADDING-BOTTOM: 7px; width: 97%;" valign="top">
-                                                    <table id="chklist2" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <input id="chklist_0" type="checkbox" name="chklist$0" />
-                                                                    <label for="chklist_0">Agro &amp; Food Processing</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_5" type="checkbox" name="chklist$5" />
-                                                                    <label for="chklist_5">Healthcare, Biotech &amp; Pharma</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_9" type="checkbox" name="chklist$9" />
-                                                                    <label for="chklist_9">Manufacturing</label>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input id="chklist_1" type="checkbox" name="chklist$1" />
-                                                                    <label for="chklist_1">Education</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_6" type="checkbox" name="chklist$6" />
-                                                                    <label for="chklist_6">IT   &amp; Telecommunications</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_10" type="checkbox" name="chklist$10" />
-                                                                    <label for="chklist_10">Tourism &amp; Hospitality</label>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input id="chklist_2" type="checkbox" name="chklist$2" />
-                                                                    <label for="chklist_2">Entertainment</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_7" type="checkbox" name="chklist$7" />
-                                                                    <label for="chklist_7">Infrastructure &amp; Real Estate</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_11" type="checkbox" name="chklist$11" />
-                                                                    <label for="chklist_11">Trading</label>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input id="chklist_3" type="checkbox" name="chklist$3" />
-                                                                    <label for="chklist_3">Finance &amp; Banking</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_8" type="checkbox" name="chklist$8" />
-                                                                    <label for="chklist_8">Legal   Services</label>
-                                                                </td>
-                                                                <td>
-                                                                    <input id="chklist_12" type="checkbox" name="chklist$12" />
-                                                                    <label for="chklist_12">Logistics &amp; Shipping</label>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input id="chklist_4" type="checkbox" name="chklist$4" />
-                                                                    <label for="chklist_4">Garments &amp; Textiles</label>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </fieldset>
-                                    <br />
-                                    <fieldset>
-                                        <legend><span class="subHead">Address</span></legend>
-                                        <table style="width: 100%; font-family: 'Poppins', sans-serif; font-size: 13px" cellpadding="2">
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Street1*</td>
-                                                <td style=" width: 25%;"><input type="text" name="street1" id="street1" /></td>
-                                                <td style=" width: 22%;" valign="top"> Street2*</td>
-                                                <td style=" width: 25%;" valign="top"><input type="text" name="street2" id="street2" /></td>
-                                            </tr>
-                                            <tr style="color: #000000">
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> City/Town*</td>
-                                                <td style=" width: 25%;"><input type="text" name="city" id="city" /></td>
-                                                <td style=" width: 22%;" valign="top"> Province/State*</td>
-                                                <td style=" width: 25%;" valign="top"><input type="text" name="state" id="state" /></td>
-                                            </tr>
-                                            <tr style="color: #000000">
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Postal Code*</td>
-                                                <td style=" width: 25%;" valign="top"><input type="text" name="pcode" id="pcode" /></td>
-                                                <td style=" width: 22%;" valign="top"> Country*</td>
-                                                <td style=" width: 25%;" valign="top">
-                                                    <select name="country" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="  " selected>Select</option>
-                                                        <option value="--">none</option>
-                                                        <option value="AF">Afghanistan</option>
-                                                        <option value="AL">Albania</option>
-                                                        <option value="DZ">Algeria</option>
-                                                        <option value="AS">American Samoa</option>
-                                                        <option value="AD">Andorra</option>
-                                                        <option value="AO">Angola</option>
-                                                        <option value="AI">Anguilla</option>
-                                                        <option value="AQ">Antarctica</option>
-                                                        <option value="AG">Antigua and Barbuda</option>
-                                                        <option value="AR">Argentina</option>
-                                                        <option value="AM">Armenia</option>
-                                                        <option value="AW">Aruba</option>
-                                                        <option value="AU">Australia</option>
-                                                        <option value="AT">Austria</option>
-                                                        <option value="AZ">Azerbaijan</option>
-                                                        <option value="BS">Bahamas</option>
-                                                        <option value="BH">Bahrain</option>
-                                                        <option value="BD">Bangladesh</option>
-                                                        <option value="BB">Barbados</option>
-                                                        <option value="BY">Belarus</option>
-                                                        <option value="BE">Belgium</option>
-                                                        <option value="BZ">Belize</option>
-                                                        <option value="BJ">Benin</option>
-                                                        <option value="BM">Bermuda</option>
-                                                        <option value="BT">Bhutan</option>
-                                                        <option value="BO">Bolivia</option>
-                                                        <option value="BA">Bosnia</option>
-                                                        <option value="BW">Botswana</option>
-                                                        <option value="BV">Bouvet Island</option>
-                                                        <option value="BR">Brazil</option>
-                                                        <option value="BN">Brunei Darussalam</option>
-                                                        <option value="BG">Bulgaria</option>
-                                                        <option value="BF">Burkina Faso</option>
-                                                        <option value="BI">Burundi</option>
-                                                        <option value="KH">Cambodia</option>
-                                                        <option value="CM">Cameroon</option>
-                                                        <option value="CA">Canada</option>
-                                                        <option value="CV">Cape Verde</option>
-                                                        <option value="KY">Cayman Islands</option>
-                                                        <option value="TD">Chad</option>
-                                                        <option value="CL">Chile</option>
-                                                        <option value="CN">China</option>
-                                                        <option value="CX">Christmas Island</option>
-                                                        <option value="CO">Colombia</option>
-                                                        <option value="KM">Comoros</option>
-                                                        <option value="CG">Congo</option>
-                                                        <option value="CK">Cook Islands</option>
-                                                        <option value="CR">Costa Rica</option>
-                                                        <option value="CI">Cote d'Ivoire</option>
-                                                        <option value="HR">Croatia (Hrvatska)</option>
-                                                        <option value="CU">Cuba</option>
-                                                        <option value="CY">Cyprus</option>
-                                                        <option value="CZ">Czech Republic</option>
-                                                        <option value="DK">Denmark</option>
-                                                        <option value="DJ">Djibouti</option>
-                                                        <option value="DM">Dominica</option>
-                                                        <option value="DO">Dominican Republic</option>
-                                                        <option value="TP">East Timor</option>
-                                                        <option value="EC">Ecuador</option>
-                                                        <option value="EG">Egypt</option>
-                                                        <option value="SV">El Salvador</option>
-                                                        <option value="GQ">Equatorial Guinea</option>
-                                                        <option value="ER">Eritrea</option>
-                                                        <option value="EE">Estonia</option>
-                                                        <option value="ET">Ethiopia</option>
-                                                        <option value="FO">Faroe Islands</option>
-                                                        <option value="FJ">Fiji</option>
-                                                        <option value="FI">Finland</option>
-                                                        <option value="FR">France</option>
-                                                        <option value="GF">French Guiana</option>
-                                                        <option value="PF">French Polynesia</option>
-                                                        <option value="GA">Gabon</option>
-                                                        <option value="GM">Gambia</option>
-                                                        <option value="GE">Georgia</option>
-                                                        <option value="DE">Germany</option>
-                                                        <option value="GH">Ghana</option>
-                                                        <option value="GI">Gibraltar</option>
-                                                        <option value="GR">Greece</option>
-                                                        <option value="GL">Greenland</option>
-                                                        <option value="GD">Grenada</option>
-                                                        <option value="GP">Guadeloupe</option>
-                                                        <option value="GU">Guam</option>
-                                                        <option value="GT">Guatemala</option>
-                                                        <option value="GN">Guinea</option>
-                                                        <option value="GW">Guinea-Bissau</option>
-                                                        <option value="GY">Guyana</option>
-                                                        <option value="HT">Haiti</option>
-                                                        <option value="HN">Honduras</option>
-                                                        <option value="HK">Hong Kong</option>
-                                                        <option value="HU">Hungary</option>
-                                                        <option value="IS">Iceland</option>
-                                                        <option value="IN">India</option>
-                                                        <option value="ID">Indonesia</option>
-                                                        <option value="IR">Iran</option>
-                                                        <option value="IQ">Iraq</option>
-                                                        <option value="IE">Ireland</option>
-                                                        <option value="IL">Israel</option>
-                                                        <option value="IT">Italy</option>
-                                                        <option value="JM">Jamaica</option>
-                                                        <option value="JP">Japan</option>
-                                                        <option value="JO">Jordan</option>
-                                                        <option value="KZ">Kazakhstan</option>
-                                                        <option value="KE">Kenya</option>
-                                                        <option value="KI">Kiribati</option>
-                                                        <option value="KP">Korea</option>
-                                                        <option value="KW">Kuwait</option>
-                                                        <option value="KG">Kyrgyzstan</option>
-                                                        <option value="LV">Latvia</option>
-                                                        <option value="LB">Lebanon</option>
-                                                        <option value="LS">Lesotho</option>
-                                                        <option value="LR">Liberia</option>
-                                                        <option value="LY">Libya</option>
-                                                        <option value="LI">Liechtenstein</option>
-                                                        <option value="LT">Lithuania</option>
-                                                        <option value="LU">Luxembourg</option>
-                                                        <option value="MO">Macau</option>
-                                                        <option value="MG">Madagascar</option>
-                                                        <option value="MW">Malawi</option>
-                                                        <option value="MY">Malaysia</option>
-                                                        <option value="MV">Maldives</option>
-                                                        <option value="ML">Mali</option>
-                                                        <option value="MT">Malta</option>
-                                                        <option value="MH">Marshall Islands</option>
-                                                        <option value="MQ">Martinique</option>
-                                                        <option value="MR">Mauritania</option>
-                                                        <option value="MU">Mauritius</option>
-                                                        <option value="YT">Mayotte</option>
-                                                        <option value="MX">Mexico</option>
-                                                        <option value="MN">Mongolia</option>
-                                                        <option value="MS">Montserrat</option>
-                                                        <option value="MA">Morocco</option>
-                                                        <option value="MZ">Mozambique</option>
-                                                        <option value="MM">Myanmar</option>
-                                                        <option value="NA">Namibia</option>
-                                                        <option value="NR">Nauru</option>
-                                                        <option value="NP">Nepal</option>
-                                                        <option value="NL">Netherlands</option>
-                                                        <option value="NC">New Caledonia</option>
-                                                        <option value="NZ">New Zealand</option>
-                                                        <option value="NI">Nicaragua</option>
-                                                        <option value="NE">Niger</option>
-                                                        <option value="NG">Nigeria</option>
-                                                        <option value="NU">Niue</option>
-                                                        <option value="NF">Norfolk Island</option>
-                                                        <option value="NO">Norway</option>
-                                                        <option value="OM">Oman</option>
-                                                        <option value="PK">Pakistan</option>
-                                                        <option value="PW">Palau</option>
-                                                        <option value="PA">Panama</option>
-                                                        <option value="PG">Papua New Guinea</option>
-                                                        <option value="PY">Paraguay</option>
-                                                        <option value="PE">Peru</option>
-                                                        <option value="PH">Philippines</option>
-                                                        <option value="PN">Pitcairn</option>
-                                                        <option value="PL">Poland</option>
-                                                        <option value="PT">Portugal</option>
-                                                        <option value="PR">Puerto Rico</option>
-                                                        <option value="QA">Qatar</option>
-                                                        <option value="RE">Reunion</option>
-                                                        <option value="RO">Romania</option>
-                                                        <option value="RW">Rwanda</option>
-                                                        <option value="LC">Saint LUCIA</option>
-                                                        <option value="WS">Samoa</option>
-                                                        <option value="SM">San Marino</option>
-                                                        <option value="SA">Saudi Arabia</option>
-                                                        <option value="SN">Senegal</option>
-                                                        <option value="SC">Seychelles</option>
-                                                        <option value="SL">Sierra Leone</option>
-                                                        <option value="SG">Singapore</option>
-                                                        <option value="SK">Slovakia</option>
-                                                        <option value="SI">Slovenia</option>
-                                                        <option value="SB">Solomon Islands</option>
-                                                        <option value="SO">Somalia</option>
-                                                        <option value="ZA">South Africa</option>
-                                                        <option value="GS">South Georgia</option>
-                                                        <option value="ES">Spain</option>
-                                                        <option value="LK">Sri Lanka</option>
-                                                        <option value="SH">St. Helena</option>
-                                                        <option value="SD">Sudan</option>
-                                                        <option value="SR">Suriname</option>
-                                                        <option value="SZ">Swaziland</option>
-                                                        <option value="SE">Sweden</option>
-                                                        <option value="CH">Switzerland</option>
-                                                        <option value="TW">Taiwan</option>
-                                                        <option value="TJ">Tajikistan</option>
-                                                        <option value="TZ">Tanzania</option>
-                                                        <option value="TH">Thailand</option>
-                                                        <option value="TG">Togo</option>
-                                                        <option value="TK">Tokelau</option>
-                                                        <option value="TO">Tonga</option>
-                                                        <option value="TN">Tunisia</option>
-                                                        <option value="TR">Turkey</option>
-                                                        <option value="TM">Turkmenistan</option>
-                                                        <option value="TV">Tuvalu</option>
-                                                        <option value="UG">Uganda</option>
-                                                        <option value="UA">Ukraine</option>
-                                                        <option value="AE">United Arab Emirates</option>
-                                                        <option value="GB">United Kingdom</option>
-                                                        <option value="US">United States</option>
-                                                        <option value="UY">Uruguay</option>
-                                                        <option value="UZ">Uzbekistan</option>
-                                                        <option value="VU">Vanuatu</option>
-                                                        <option value="VE">Venezuela</option>
-                                                        <option value="VN">Viet Nam</option>
-                                                        <option value="EH">Western Sahara</option>
-                                                        <option value="YE">Yemen</option>
-                                                        <option value="YU">Yugoslavia</option>
-                                                        <option value="ZM">Zambia</option>
-                                                        <option value="ZW">Zimbabwe</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr style="color: #000000">
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top">Telephone No*</td>
-                                                <td style=" width: 25%;"><input type="text" name="telephone" id="telephone" />(Including Country Code)</td>
-                                                <td style=" width: 22%;" valign="top">Fax</td>
-                                                <td style=" width: 25%;" valign="top">
-                                                    <input type="text" name="fax_no" id="fax_no" />(Including Country Code)
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top">Email Id*</td>
-                                                <td style=" width: 25%;"><input type="text" name="emailid" id="emailid" /></td>
-                                                <td style=" width: 22%;" valign="top">Mobile Phone</td>
-                                                <td style=" width: 25%;" valign="top"><input type="text" name="mphone" id="mphone" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="4" valign="top" style="padding-bottom: 5px; padding-top: 5px; width: 97%;"><strong style="width: 97%"> As there will be a security measures in place during the PBD Singapore conference, kindly provide us the following details to ease security clearance: </strong> </td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Passport Number*</td>
-                                                <td style="WIDTH: 25%"><input type="text" name="passportnumber" id="passportnumber" /></td>
-                                                <td style=" width: 22%;" valign="top"></td>
-                                                <td style=" width: 25%;" valign="top"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top">Nationality*</td>
-                                                <td style="WIDTH: 25%" valign="top"><input type="text" name="nationality" id="nationality" /></td>
-                                                <td style=" width: 22%;" valign="top"></td>
-                                                <td style=" width: 25%;" valign="top"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Date of Birth*</td>
-                                                <td colspan="2" style="WIDTH: 50%">
-                                                    <select id="DOB" name="DOB" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="date" selected="selected">Date</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                        <option value="13">13</option>
-                                                        <option value="14">14</option>
-                                                        <option value="15">15</option>
-                                                        <option value="16">16</option>
-                                                        <option value="17">17</option>
-                                                        <option value="18">18</option>
-                                                        <option value="19">19</option>
-                                                        <option value="20">20</option>
-                                                        <option value="21">21</option>
-                                                        <option value="22">22</option>
-                                                        <option value="23">23</option>
-                                                        <option value="24">24</option>
-                                                        <option value="25">25</option>
-                                                        <option value="26">26</option>
-                                                        <option value="27">27</option>
-                                                        <option value="28">28</option>
-                                                        <option value="29">29</option>
-                                                        <option value="30">30</option>
-                                                        <option value="31">31</option>
-                                                    </select>
-                                                    &nbsp;-&nbsp;
-                                                    <select id="month_name" name="month_name" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Month" selected="selected">Month</option>
-                                                        <option value="Jan">Jan</option>
-                                                        <option value="Feb">Feb</option>
-                                                        <option value="Mar">Mar</option>
-                                                        <option value="Apr">Apr</option>
-                                                        <option value="May">May</option>
-                                                        <option value="June">June</option>
-                                                        <option value="July">July</option>
-                                                        <option value="Aug">Aug</option>
-                                                        <option value="Sep">Sep</option>
-                                                        <option value="Oct">Oct</option>
-                                                        <option value="Nov">Nov</option>
-                                                        <option value="Dec">Dec</option>
-                                                    </select>
-                                                    &nbsp;-&nbsp;
-                                                    <select id="year_name" name="year_name" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Year" selected="selected">Year</option>
-                                                        <option value="1950">1950</option>
-                                                        <option value="1951">1951</option>
-                                                        <option value="1952">1952</option>
-                                                        <option value="1953">1953</option>
-                                                        <option value="1954">1954</option>
-                                                        <option value="1955">1955</option>
-                                                        <option value="1956">1956</option>
-                                                        <option value="1957">1957</option>
-                                                        <option value="1958">1958</option>
-                                                        <option value="1959">1959</option>
-                                                        <option value="1960">1960</option>
-                                                        <option value="1961">1961</option>
-                                                        <option value="1962">1962</option>
-                                                        <option value="1963">1963</option>
-                                                        <option value="1964">1964</option>
-                                                        <option value="1965">1965</option>
-                                                        <option value="1966">1966</option>
-                                                        <option value="1967">1967</option>
-                                                        <option value="1968">1968</option>
-                                                        <option value="1969">1969</option>
-                                                        <option value="1970">1970</option>
-                                                        <option value="1971">1971</option>
-                                                        <option value="1972">1972</option>
-                                                        <option value="1973">1973</option>
-                                                        <option value="1974">1974</option>
-                                                        <option value="1975">1975</option>
-                                                        <option value="1976">1976</option>
-                                                        <option value="1977">1977</option>
-                                                        <option value="1978">1978</option>
-                                                        <option value="1979">1979</option>
-                                                        <option value="1980">1980</option>
-                                                        <option value="1981">1981</option>
-                                                        <option value="1982">1982</option>
-                                                        <option value="1983">1983</option>
-                                                        <option value="1984">1984</option>
-                                                        <option value="1985">1985</option>
-                                                        <option value="1986">1986</option>
-                                                        <option value="1987">1987</option>
-                                                        <option value="1988">1988</option>
-                                                        <option value="1989">1989</option>
-                                                        <option value="1990">1990</option>
-                                                        <option value="1991">1991</option>
-                                                        <option value="1992">1992</option>
-                                                        <option value="1993">1993</option>
-                                                        <option value="1994">1994</option>
-                                                        <option value="1995">1995</option>
-                                                        <option value="1996">1996</option>
-                                                    </select>
-                                                </td>
-                                                <td style=" width: 25%;" valign="top"></td>
-                                            </tr>
-                                        </table>
-                                    </fieldset>
-                                    <br />
-                                    <fieldset>
-                                        <legend><span class="subHead">Contact Person Information (Next-of-Kin)</span></legend>
-                                        <table style="width: 100%; font-family: 'Poppins', sans-serif; font-size: 13px" cellpadding="2">
-                                            <tr>
-                                                <td style=" width: 22%; padding-top: 7px;" valign="top"> Salutation*</td>
-                                                <td style=" width: 25%; padding-bottom: 7px;" valign="top">
-                                                    <span style="width: 50%; padding-top: 7px;">
-                                                        <select name="contact_salutation" style="font-family: 'Poppins', sans-serif;">
-                                                            <option value="-">Select</option>
-                                                            <option value="Dr">Dr</option>
-                                                            <option value="Prof">Prof</option>
-                                                            <option value="Mr">Mr</option>
-                                                            <option value="Mdm">Mdm</option>
-                                                            <option value="Ms">Ms</option>
-                                                        </select>
-                                                    </span>
-                                                </td>
-                                                <td style=" width: 22%;" valign="top"></td>
-                                                <td style=" width: 25%; padding-bottom: 7px;"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-top: 7px;" valign="top"> Last Name*</td>
-                                                <td style=" width: 25%; padding-bottom: 7px;" valign="top"><input type="text" name="contact_lastname" id="contact_lastname" /></td>
-                                                <td style=" width: 22%;" valign="top"> First&nbsp; Name*</td>
-                                                <td style=" width: 25%; padding-bottom: 7px;" valign="top"><input type="text" name="contact_firstname" id="contact_firstname" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-top: 7px;" valign="top"> Telephone No*</td>
-                                                <td style=" width: 25%; padding-bottom: 7px;" valign="top"><input type="text" name="contactphone" id="contactphone" /><br />(Including Country Code)</td>
-                                                <td style=" width: 22%;" valign="top"> Mobile Phone</td>
-                                                <td style=" width: 25%; padding-bottom: 7px;" valign="top"><input type="text" name="contact_mphone" id="contact_mphone" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-top: 7px;" valign="top"> Email Id*</td>
-                                                <td style=" width: 25%; padding-bottom: 7px;" valign="top"><input type="text" name="contactemail" id="contactemail" /></td>
-                                                <td style=" width: 22%;" valign="top">&nbsp;</td>
-                                                <td style=" width: 25%; padding-bottom: 7px;"></td>
-                                            </tr>
-                                        </table>
-                                    </fieldset>
-                                    <br />
-                                    <fieldset>
-                                        <legend><span class="subHead">Flight Information (Optional)</span></legend>
-                                        <table style="width: 100%; font-family: 'Poppins', sans-serif; font-size: 13px" cellpadding="2">
-                                            <tr>
-                                                <td colspan="4" valign="top" style="padding-bottom: 7px; width: 22%;">
-                                                    For overseas guests attending PBD Singapore, we would be grateful if you could please
-                                                    provide us with the following details:
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"></td>
-                                                <td style=" width: 25%"></td>
-                                                <td style=" width: 25%"></td>
-                                                <td style=" width: 25%"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Date of Arrival</td>
-                                                <td colspan="2" style="height: 15px">
-                                                    <select id="arrival_date" name="arrival_date" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Date" selected="selected">Date</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                        <option value="13">13</option>
-                                                        <option value="14">14</option>
-                                                        <option value="15">15</option>
-                                                        <option value="16">16</option>
-                                                        <option value="17">17</option>
-                                                        <option value="18">18</option>
-                                                        <option value="19">19</option>
-                                                        <option value="20">20</option>
-                                                        <option value="21">21</option>
-                                                        <option value="22">22</option>
-                                                        <option value="23">23</option>
-                                                        <option value="24">24</option>
-                                                        <option value="25">25</option>
-                                                        <option value="26">26</option>
-                                                        <option value="27">27</option>
-                                                        <option value="28">28</option>
-                                                        <option value="29">29</option>
-                                                        <option value="30">30</option>
-                                                        <option value="31">31</option>
-                                                    </select>
-                                                    &nbsp;
-                                                    <select id="arrival_month" name="arrival_month" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Month" selected="selected">Month</option>
-                                                        <option value="Jan">Jan</option>
-                                                        <option value="Feb">Feb</option>
-                                                        <option value="Mar">Mar</option>
-                                                        <option value="Apr">Apr</option>
-                                                        <option value="May">May</option>
-                                                        <option value="June">June</option>
-                                                        <option value="July">July</option>
-                                                        <option value="Aug">Aug</option>
-                                                        <option value="Sep">Sep</option>
-                                                        <option value="Oct">Oct</option>
-                                                        <option value="Nov">Nov</option>
-                                                        <option value="Dec">Dec</option>
-                                                    </select>
-                                                    &nbsp;
-                                                    <select id="arrival_year" name="arrival_year" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Year" selected="selected">Year</option>
-                                                        <option value="1950">1950</option>
-                                                        <option value="1951">1951</option>
-                                                        <option value="1952">1952</option>
-                                                        <option value="1953">1953</option>
-                                                        <option value="1954">1954</option>
-                                                        <option value="1955">1955</option>
-                                                        <option value="1956">1956</option>
-                                                        <option value="1957">1957</option>
-                                                        <option value="1958">1958</option>
-                                                        <option value="1959">1959</option>
-                                                        <option value="1960">1960</option>
-                                                        <option value="1961">1961</option>
-                                                        <option value="1962">1962</option>
-                                                        <option value="1963">1963</option>
-                                                        <option value="1964">1964</option>
-                                                        <option value="1965">1965</option>
-                                                        <option value="1966">1966</option>
-                                                        <option value="1967">1967</option>
-                                                        <option value="1968">1968</option>
-                                                        <option value="1969">1969</option>
-                                                        <option value="1970">1970</option>
-                                                        <option value="1971">1971</option>
-                                                        <option value="1972">1972</option>
-                                                        <option value="1973">1973</option>
-                                                        <option value="1974">1974</option>
-                                                        <option value="1975">1975</option>
-                                                        <option value="1976">1976</option>
-                                                        <option value="1977">1977</option>
-                                                        <option value="1978">1978</option>
-                                                        <option value="1979">1979</option>
-                                                        <option value="1980">1980</option>
-                                                        <option value="1981">1981</option>
-                                                        <option value="1982">1982</option>
-                                                        <option value="1983">1983</option>
-                                                        <option value="1984">1984</option>
-                                                        <option value="1985">1985</option>
-                                                        <option value="1986">1986</option>
-                                                        <option value="1987">1987</option>
-                                                        <option value="1988">1988</option>
-                                                        <option value="1989">1989</option>
-                                                        <option value="1990">1990</option>
-                                                        <option value="1991">1991</option>
-                                                        <option value="1992">1992</option>
-                                                        <option value="1993">1993</option>
-                                                        <option value="1994">1994</option>
-                                                        <option value="1995">1995</option>
-                                                        <option value="1996">1996</option>
-                                                        <option value="1997">1997</option>
-                                                        <option value="1998">1998</option>
-                                                        <option value="1999">1999</option>
-                                                        <option value="2000">2000</option>
-                                                        <option value="2001">2001</option>
-                                                        <option value="2002">2002</option>
-                                                        <option value="2003">2003</option>
-                                                        <option value="2004">2004</option>
-                                                        <option value="2005">2005</option>
-                                                        <option value="2006">2006</option>
-                                                        <option value="2007">2007</option>
-                                                        <option value="2008">2008</option>
-                                                    </select>
-                                                </td>
-                                                <td style=" width: 25%;"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Date of Depature</td>
-                                                <td colspan="2" style="">
-                                                    <select id="departure_date" name="departure_date" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Date" selected="selected">Date</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                        <option value="13">13</option>
-                                                        <option value="14">14</option>
-                                                        <option value="15">15</option>
-                                                        <option value="16">16</option>
-                                                        <option value="17">17</option>
-                                                        <option value="18">18</option>
-                                                        <option value="19">19</option>
-                                                        <option value="20">20</option>
-                                                        <option value="21">21</option>
-                                                        <option value="22">22</option>
-                                                        <option value="23">23</option>
-                                                        <option value="24">24</option>
-                                                        <option value="25">25</option>
-                                                        <option value="26">26</option>
-                                                        <option value="27">27</option>
-                                                        <option value="28">28</option>
-                                                        <option value="29">29</option>
-                                                        <option value="30">30</option>
-                                                        <option value="31">31</option>
-                                                    </select>
-                                                    &nbsp;
-                                                    <select id="departure_month" name="departure_month" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Month" selected="selected">Month</option>
-                                                        <option value="Jan">Jan</option>
-                                                        <option value="Feb">Feb</option>
-                                                        <option value="Mar">Mar</option>
-                                                        <option value="Apr">Apr</option>
-                                                        <option value="May">May</option>
-                                                        <option value="June">June</option>
-                                                        <option value="July">July</option>
-                                                        <option value="Aug">Aug</option>
-                                                        <option value="Sep">Sep</option>
-                                                        <option value="Oct">Oct</option>
-                                                        <option value="Nov">Nov</option>
-                                                        <option value="Dec">Dec</option>
-                                                    </select>
-                                                    &nbsp;
-                                                    <select id="departure_year" name="departure_year" style="font-family: 'Poppins', sans-serif;">
-                                                        <option value="Year" selected="selected">Year</option>
-                                                        <option value="1950">1950</option>
-                                                        <option value="1951">1951</option>
-                                                        <option value="1952">1952</option>
-                                                        <option value="1953">1953</option>
-                                                        <option value="1954">1954</option>
-                                                        <option value="1955">1955</option>
-                                                        <option value="1956">1956</option>
-                                                        <option value="1957">1957</option>
-                                                        <option value="1958">1958</option>
-                                                        <option value="1959">1959</option>
-                                                        <option value="1960">1960</option>
-                                                        <option value="1961">1961</option>
-                                                        <option value="1962">1962</option>
-                                                        <option value="1963">1963</option>
-                                                        <option value="1964">1964</option>
-                                                        <option value="1965">1965</option>
-                                                        <option value="1966">1966</option>
-                                                        <option value="1967">1967</option>
-                                                        <option value="1968">1968</option>
-                                                        <option value="1969">1969</option>
-                                                        <option value="1970">1970</option>
-                                                        <option value="1971">1971</option>
-                                                        <option value="1972">1972</option>
-                                                        <option value="1973">1973</option>
-                                                        <option value="1974">1974</option>
-                                                        <option value="1975">1975</option>
-                                                        <option value="1976">1976</option>
-                                                        <option value="1977">1977</option>
-                                                        <option value="1978">1978</option>
-                                                        <option value="1979">1979</option>
-                                                        <option value="1980">1980</option>
-                                                        <option value="1981">1981</option>
-                                                        <option value="1982">1982</option>
-                                                        <option value="1983">1983</option>
-                                                        <option value="1984">1984</option>
-                                                        <option value="1985">1985</option>
-                                                        <option value="1986">1986</option>
-                                                        <option value="1987">1987</option>
-                                                        <option value="1988">1988</option>
-                                                        <option value="1989">1989</option>
-                                                        <option value="1990">1990</option>
-                                                        <option value="1991">1991</option>
-                                                        <option value="1992">1992</option>
-                                                        <option value="1993">1993</option>
-                                                        <option value="1994">1994</option>
-                                                        <option value="1995">1995</option>
-                                                        <option value="1996">1996</option>
-                                                        <option value="1997">1997</option>
-                                                        <option value="1998">1998</option>
-                                                        <option value="1999">1999</option>
-                                                        <option value="2000">2000</option>
-                                                        <option value="2001">2001</option>
-                                                        <option value="2002">2002</option>
-                                                        <option value="2003">2003</option>
-                                                        <option value="2004">2004</option>
-                                                        <option value="2005">2005</option>
-                                                        <option value="2006">2006</option>
-                                                        <option value="2007">2007</option>
-                                                        <option value="2008">2008</option>
-                                                        <option value="2009">2009</option>
-                                                        <option value="2010">2010</option>
-                                                        <option value="2011">2011</option>
-                                                        <option value="2012">2012</option>
-                                                        <option value="2013">2013</option>
-                                                        <option value="2014">2014</option>
-                                                        <option value="2015">2015</option>
-                                                        <option value="2016">2016</option>
-                                                        <option value="2017">2017</option>
-                                                        <option value="2018">2018</option>
-                                                        <option value="2019">2019</option>
-                                                        <option value="2020">2020</option>
-                                                        <option value="2021">2021</option>
-                                                        <option value="2022">2022</option>
+                <h1 style="text-transform: uppercase; color: white;"> <img src="~/Content/register/assets/images/logo.png" />&nbsp;&nbsp;&nbsp;<span style="padding: 36%; margin-left: -319px;">Registration Form</span> </h1>
+            </div>
 
-                                                    </select>
-                                                </td>
-                                                <td style=" width: 25%;"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Arrival Flight Number</td>
-                                                <td style=" width: 25%;"><input type="text" name="arrival_flight_number" id="arrival_flight_number" /></td>
-                                                <td style=" width: 25%;"></td>
-                                                <td style=" width: 25%;"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style=" width: 22%; padding-bottom: 7px;" valign="top"> Depature Flight Number</td>
-                                                <td style=" width: 25%;"><input type="text" name="departure_flight_number" id="departure_flight_number" /></td>
-                                                <td style=" width: 25%;"></td>
-                                                <td style=" width: 25%;"></td>
-                                            </tr>
-                                        </table>
-                                    </fieldset>
-                                    <br />
-                                    <input id="submit" type="button" value="Submit" style=" margin-left: 399px; width: 86px;">
-                                </td>
-                                <td align="left" style="width: 2%" valign="top"></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+            <div class="form-1-container section-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col form-1 section-description wow fadeIn">
+                            <h2>Form 1</h2>
+                            <div class="divider-1 wow fadeInUp"><span></span></div>
+                            <p>A form with 2 "fieldset"-s and 2 "legend"-s: "User's credentials" and "User's preferences".</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 form-1-box wow fadeInUp">
+
+                            <form action="" method="post">
+                                <!-- User's Credentials  -->
+                                <fieldset class="form-group border p-3">
+                                    <legend class="w-auto px-2">User's Credentials</legend>
+                                    <div class="form-group">
+                                        <label for="username">Username:</label>
+                                        <input type="text" class="form-control username" id="username" placeholder="Username..." name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control email" id="email" placeholder="Email..." name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <input type="password" class="form-control password" id="password" placeholder="Password..." name="password">
+                                    </div>
+                                </fieldset>
+                                <!-- User's Preferences  -->
+                                <fieldset class="form-group border p-3">
+                                    <legend class="w-auto px-2">User's Preferences</legend>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="preferences" id="daily" value="daily">
+                                        <label class="form-check-label" for="daily">I want <strong>daily</strong> emails</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="preferences" id="weekly" value="weekly">
+                                        <label class="form-check-label" for="weekly">I want <strong>weekly</strong> emails</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="preferences" id="monthly" value="monthly">
+                                        <label class="form-check-label" for="monthly">I want <strong>monthly</strong> emails</label>
+                                    </div>
+                                </fieldset>
+                                <!-- Submit Button  -->
+                                <div class="form-group row text-right">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary btn-customized">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </form>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
 
-    
+                    <div class="col-lg-3 col-md-6 footer-contact footer-row">
+                        <img src="~/Content/register/assets/images/logo.png" title="LOGO" alt="LOGO">
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>QUICK LINKS</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Home</a></li>
+                            <li><i class="bx"></i> <a href="#">About The G20</a></li>
+                            <li><i class="bx"></i> <a href="#">G20 Presidency Of India</a></li>
+                            <li><i class="bx"></i> <a href="#">Workstreams</a></li>
+                            <li><i class="bx"></i> <a href="#">Media</a></li>
+                            <li><i class="bx"></i> <a href="#">Explore india</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>DIRECTORY</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Abenomics</a></li>
+                            <li><i class="bx"></i> <a href="#">G20 INDIA 2023</a></li>
+                            <li><i class="bx"></i> <a href="#">Innovation india</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>MENU</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Cabinet</a></li>
+                            <li><i class="bx"></i> <a href="#">Ministries and Agencies</a></li>
+                            <li><i class="bx"></i> <a href="#">The Diet</a></li>
+                            <li><i class="bx"></i> <a href="#">The Supreme Count</a></li>
+                            <li><i class="bx"></i> <a href="#">Other Governmental Agencies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>CONTACT</h4>
+                        <ul>
+                            <li><i class="bx"></i> <a href="#">Address line 1</a></li>
+                            <li><i class="bx"></i> <a href="#">Address line 2,</a></li>
+                            <li><i class="bx"></i> <a href="#">Email: info@g20india.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="copyright topStrip cf">
+                <ul class="leftLink">
+                    <li> <a class="topSitemap" href="#">&nbsp; Trems and Conditions</a></li>
+                    <li><a class="topSitemap" href="#">Privacy Policy</a></li>
+                    <li><a class="topFeedback" href="#">Copyright Policy </a></li>
+                    <li><a class="topSitemap" href="#">Hyperlinking Policy</a></li>
+                    <li><a class="topSitemap" href="#">Accessibility Statement</a></li>
+                    <li><a class="topFeedback" href="#">Help </a></li>
+                </ul>
+            </div>
+            <div class="credits">
+                © Government of india 2023
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
